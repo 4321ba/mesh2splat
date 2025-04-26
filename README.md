@@ -110,6 +110,19 @@ To build **Mesh2Splat**, follow the following steps:
    > **Tip**: Use the release build if you only need the final executable in optimized (Release) mode.
 
 
+## Build Instructions (Linux)
+
+The hardware and software requirements are similar as on Windows.
+
+To build **Mesh2Splat**, follow the following steps:
+
+1. Open a terminal in the project root directory.
+2. Run one of the provided bash scripts:
+   - `run_build_debug.sh`
+   - `run_build_release.sh`
+3. Open the `build` folder and run the executable
+
+
 ## Limitations
 - Volumetric Data such as foliage, grass, hair, clouds, etc. has not being targeted and will probably not be converted correctly if using primitives different from triangles.<br>
 
