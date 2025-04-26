@@ -3,7 +3,7 @@
 //        Copyright (c) 2025 Electronic Arts Inc. All rights reserved.       //
 ///////////////////////////////////////////////////////////////////////////////
 
-#include "GuiRendererConcreteMediator.hpp"
+#include "guiRendererConcreteMediator.hpp"
 
 void GuiRendererConcreteMediator::notify(EventType event)
 {
@@ -99,7 +99,7 @@ void GuiRendererConcreteMediator::notify(EventType event)
             break;
         }
         case EventType::SavePLY: {
-            renderer.getSceneManager().exportPly(imguiUI.getMeshFullFilePathDestination(), imguiUI.getFormatOption());
+            renderer.getSceneManager().exportPly("concrete/path/as/test/maybe/the\character/is/a/problem", imguiUI.getFormatOption());
             imguiUI.setShouldSavePly(false);
             break;
         }

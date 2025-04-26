@@ -450,10 +450,9 @@ namespace utils
             C.x * (A.y - B.y)
         );
     }
-
+    
     std::string getExecutablePath() {
-        char buffer[MAX_PATH];
-        GetModuleFileNameA(nullptr, buffer, MAX_PATH);
+        char buffer[] = "/absolute/path/as/a/test";
         return std::string(buffer);
     }
 
