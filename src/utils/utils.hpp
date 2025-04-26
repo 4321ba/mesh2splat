@@ -6,14 +6,6 @@
 #pragma once
 #define _CRTDBG_MAP_ALLOC  
 #include <stdlib.h>  
-#ifdef _MSC_VER
-#include <crtdbg.h>
-#else
-#define _ASSERT(expr) ((void)0)
-
-#define _ASSERTE(expr) ((void)0)
-#endif
-
 
 #include <string>
 #include <vector>
@@ -51,8 +43,7 @@
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
-//#include <windows.h>
-#include <math.h>
+#include <math.h> // for isnan
 
 
 static void CheckOpenGLError(const char* stmt, const char* fname, int line)
@@ -279,10 +270,6 @@ namespace utils
     ModelFileExtension getFileExtension(const std::string& filename);
 
     float triangleArea(const glm::vec3& A, const glm::vec3& B, const glm::vec3& C);
-
-    std::string getExecutablePath();
-
-    std::string getExecutableDir();
 
     fs::path relative(fs::path p, fs::path base);
 }

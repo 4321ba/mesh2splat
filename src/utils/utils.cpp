@@ -451,16 +451,6 @@ namespace utils
         );
     }
     
-    std::string getExecutablePath() {
-        char buffer[] = "/absolute/path/as/a/test";
-        return std::string(buffer);
-    }
-
-    std::string getExecutableDir() {
-        std::experimental::filesystem::path exePath(getExecutablePath());
-        return exePath.parent_path().string();
-    }
-
     //https://stackoverflow.com/questions/63899489/c-experimental-filesystem-has-no-relative-function
     fs::path relative(fs::path p, fs::path base)
     {

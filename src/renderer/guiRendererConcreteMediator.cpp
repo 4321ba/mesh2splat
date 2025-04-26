@@ -99,7 +99,7 @@ void GuiRendererConcreteMediator::notify(EventType event)
             break;
         }
         case EventType::SavePLY: {
-            renderer.getSceneManager().exportPly("concrete/path/as/test/maybe/the\character/is/a/problem", imguiUI.getFormatOption());
+            renderer.getSceneManager().exportPly(imguiUI.getMeshFullFilePathDestination(), imguiUI.getFormatOption());
             imguiUI.setShouldSavePly(false);
             break;
         }
